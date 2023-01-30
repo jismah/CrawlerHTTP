@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.jismah'
+version '1.0-SNAPSHOT'
+
+mainClassName='org.jismah.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    //dependencia de Javalin
+    implementation 'io.javalin:javalin:4.6.4'
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.15.3'
+}
+
+test {
+    useJUnitPlatform()
+}
